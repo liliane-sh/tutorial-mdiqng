@@ -1,0 +1,26 @@
+<div *ngFor="let i of inventions">
+    <div class="invention">
+        <span> <b> Name: </b>  {{ i.name }}  || </span>
+        <span>  <b> Year: </b> {{ i.year }}  </span>
+        <span> <button class="btn btn-primary" 
+        (click)="details(i.id)"> details </button> </span>
+    </div>
+</div>
+
+<div>
+
+  <div>
+    <input type="text" [(ngModel)]="namemodel" placeholder="Enter name">
+  </div>
+
+  <div>
+    <input type="text" [(ngModel)]="yearModel" placeholder="Enter year">
+  </div>
+
+  <div>
+    <input type="textarea" [(ngModel)]="detailsModel" placeholder="Enter            details">
+  </div>
+
+  <button (click)="createInvention()">Create Invention</button>
+
+</div>
